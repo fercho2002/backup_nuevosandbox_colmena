@@ -2,11 +2,6 @@
 <Package xmlns="http://soap.sforce.com/2006/04/metadata">
     <types>
         <members>CS_SmartSupervision_Future</members>
-        <members>CS_GetUser</members>
-        <members>CS_GetUser_Schedulable</members>
-        <members>CS_QueubleUserACK</members>
-        <members>CS_SmartSupervision_WS</members>
-        <members>CS_WrapperSmartSupervision</members>
         <name>ApexClass</name>
     </types>
     <types>
@@ -17,10 +12,6 @@
     <types>
         <members>Case.Tiene_Respuesta_fianal__c</members>
         <members>CS_DocumentoCaso__c.CS_SmartSupervisionReference__c</members>
-        <members>Case.CS_SuperintendenciaDepartamento__c</members>
-        <members>Case.CS_SuperintendenciaFechaNacimiento__c</members>
-        <members>Case.CS_SuperintendenciaMunicipio__c</members>
-        <members>Case.CS_SuperintendenciaRazonSocial__c</members>
         <name>CustomField</name>
     </types>
     <types>
