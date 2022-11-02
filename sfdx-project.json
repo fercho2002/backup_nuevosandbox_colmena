@@ -1,0 +1,12 @@
+{
+  "packageDirectories": [
+    {
+      "path": "force-app",
+      "default": true
+    }
+  ],
+  "name": "devColmenaActualizado",
+  "namespace": "",
+  "sfdcLoginUrl": "https://colmenaseguros--devsegcol.sandbox.my.salesforce.com/",
+  "sourceApiVersion": "55.0"
+}
