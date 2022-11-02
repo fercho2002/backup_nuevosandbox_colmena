@@ -41,6 +41,11 @@
                 <default>false</default>
                 <label>Gestión</label>
             </value>
+            <value>
+                <fullName>7</fullName>
+                <default>false</default>
+                <label>Respuesta</label>
+            </value>
         </valueSetDefinition>
     </valueSet>
 </CustomField>

@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ValidationRule xmlns="http://soap.sforce.com/2006/04/metadata">
+    <fullName>CS_ValidacionNomenclaturaDocumento</fullName>
+    <active>true</active>
+    <description>Con esta regla estoy validando si ya se envió un documento a la super con la nomenclatura RESP_FINAL_SFC, si no se ha enviado no se debe poder cerrar el caso</description>
+    <errorConditionFormula>AND(!Tiene_Respuesta_fianal__c,ISPICKVAL( Status , &quot;Cerrado Atendido&quot;))</errorConditionFormula>
+    <errorMessage>CS_CS_ValidacionNomenclaturaDocumento: debe enviar un documento a la Superintendencia Financiera, que en el nombre del archivo  contenga   la nomenclatura: &apos;RESP_FINAL_SFC&apos;</errorMessage>
+</ValidationRule>

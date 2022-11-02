@@ -1131,6 +1131,16 @@ public without sharing class CS_SmartSupervision_Future {
 				actualizarDoc.CS_SmartSupervisionId__c = addFileResponse.id;
 				actualizarDoc.CS_SmartSupervisionTemporalURL__c = addFileResponse.file;
 				actualizarDoc.CS_EstadoSincronizacionSuperfinanciera__c = CS_Utilities.SMART_SUPERVISION_ARCHIVO_CORRECTO;
+				//* Validacion la hago para poder validar si hay algun archivo con la siguiente nomenclatura 'RESP_FINAL_SFC' para que no salte la regla cuando intentan cerrar el caso.
+				List<ContentDocument> Archivo = [SELECT id,Title FROM ContentDocument WHERE id=:fileContentDocumentId];
+				System.debug('@@@-va a validar si tiene la nomenclatura');
+				if(Archivo[0].Title.contains('RESP_FINAL_SFC')){
+					Case caseTiene = new Case(Id=caseId);
+					caseTiene.Tiene_Respuesta_fianal__c=true;
+					update caseTiene;
+					System.debug('@@@-si tiene la nomenclatura y actualizo case ');
+					}
+					
 			} else {
 				actualizarDoc.CS_EstadoSincronizacionSuperfinanciera__c = CS_Utilities.SMART_SUPERVISION_ARCHIVO_FALLIDO;
 			}
